@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/submit", submitCodeRoutes);
 
-app.get("/", (res) => {
-  res.send("Hello World");
+app.get("/", (req, res) => {
+  res.json("Server is live");
 });
 
 app.listen(PORT, () => {
