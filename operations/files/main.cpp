@@ -1,8 +1,4 @@
-#include<iostream>
-using namespace std;
+#include <iostream> 
+using namespace std; 
 
-int main()
-{
-    cout<<"hello biotches"<<endl;
-    return 0;
-}
+int main(){int x = 20, y = 50; printf("%d", x * y);return 0;}
