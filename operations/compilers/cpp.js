@@ -1,5 +1,5 @@
 import fs from "fs";
-import { execSync } from "child_process";
+import { execFileSync, execSync } from "child_process";
 
 const compilecpp = (code) => {
   var output;
@@ -14,7 +14,7 @@ const compilecpp = (code) => {
     return err.toString();
   }
   try {
-    output = execSync("./operations/binaries/main").toString();
+    output = execFileSync("./operations/binaries/main").toString();
   } catch (err) {
     return err.toString();
   }

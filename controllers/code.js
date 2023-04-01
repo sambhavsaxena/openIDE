@@ -1,7 +1,8 @@
 import asyncHandler from "express-async-handler";
 import compilecpp from "../operations/compilers/cpp.js";
-import interpretpy from "../operations/compilers/py.js";
 import compilejava from "../operations/compilers/java.js";
+import interpretpy from "../operations/interpreters/py.js";
+import interpretjs from "../operations/interpreters/js.js";
 
 const codeController = asyncHandler(async (req, res) => {
   const { code } = req.body;
@@ -10,6 +11,9 @@ const codeController = asyncHandler(async (req, res) => {
   switch (language) {
     case "cpp":
       op = compilecpp(code);
+      break;
+    case "js":
+      op = interpretjs(code);
       break;
     case "java":
       op = compilejava(code);

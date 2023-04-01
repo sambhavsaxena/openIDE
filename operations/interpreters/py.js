@@ -9,12 +9,10 @@ const interpretpy = (code) => {
     return err.toString();
   }
   try {
-    spawn("python", ["./operations/files/main.py"], {
+    output = spawn("python", ["./operations/files/main.py"], {
       detached: true,
       stdio: "inherit",
-    }).on("stdout", (data) => {
-      output = data.toString();
-    });
+    }).toString();
   } catch (err) {
     return err.toString();
   }
