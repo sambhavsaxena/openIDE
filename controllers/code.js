@@ -7,10 +7,11 @@ import interpretjs from "../operations/interpreters/js.js";
 const codeController = asyncHandler(async (req, res) => {
   const { code } = req.body;
   const { language } = req.body;
+  const { input } = req.body;
   var op;
   switch (language) {
     case "cpp":
-      op = compilecpp(code);
+      op = compilecpp(code, input);
       break;
     case "js":
       op = interpretjs(code);

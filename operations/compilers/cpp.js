@@ -1,7 +1,7 @@
 import fs from "fs";
 import { execFileSync, execSync } from "child_process";
 
-const compilecpp = (code) => {
+const compilecpp = (code, input) => {
   var output;
   try {
     fs.writeFileSync("./operations/files/main.cpp", code);
@@ -14,7 +14,10 @@ const compilecpp = (code) => {
     return err.toString();
   }
   try {
-    output = execFileSync("./operations/binaries/main").toString();
+    output = execFileSync("./operations/binaries/main", {
+      input: input,
+      encoding: "utf-8",
+    });
   } catch (err) {
     return err.toString();
   }

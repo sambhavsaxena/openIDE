@@ -1,7 +1,7 @@
 import fs from "fs";
-import { execSync } from "child_process";
+import { execFileSync, execSync } from "child_process";
 
-const compilejava = (code) => {
+const compilejava = (code, input) => {
   var pre, output;
   try {
     fs.writeFileSync("./operations/files/main.java", code);
@@ -17,7 +17,10 @@ const compilejava = (code) => {
     return err.toString();
   }
   try {
-    pre = execSync("java -cp ./operations/binaries main");
+    pre = execFileSync("java -cp ./operations/binaries main", {
+      encoding: "utf-8",
+      input: input,
+    });
     output = pre.toString();
   } catch (err) {
     return err.toString();

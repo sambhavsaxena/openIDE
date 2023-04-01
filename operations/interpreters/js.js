@@ -1,8 +1,8 @@
 import { exec } from "child_process";
 import fs from "fs";
 
-const interpretjs = (code) => {
-  var output, input;
+const interpretjs = (code, input) => {
+  var output;
   try {
     fs.writeFileSync("./operations/files/main.js", code);
   } catch (err) {

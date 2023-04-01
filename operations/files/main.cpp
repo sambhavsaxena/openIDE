@@ -1,4 +1,4 @@
 #include <iostream> 
 using namespace std; 
 
-int main(){int x = 20, y = 50; printf("%d", x * y);return 0;}
+int main(){int x; cin>>x; int y = 50; printf("%d", x * y);return 0;}

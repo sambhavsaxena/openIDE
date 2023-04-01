@@ -1,7 +1,7 @@
-import { spawn } from "child_process";
+import { execFileSync } from "child_process";
 import fs from "fs";
 
-const interpretpy = (code) => {
+const interpretpy = (code, input) => {
   var output;
   try {
     fs.writeFileSync("./operations/files/main.py", code);
@@ -9,10 +9,10 @@ const interpretpy = (code) => {
     return err.toString();
   }
   try {
-    output = spawn("python", ["./operations/files/main.py"], {
-      detached: true,
-      stdio: "inherit",
-    }).toString();
+    output = execFileSync("python3", ["./operations/files/main.py"], {
+      input: input,
+      encoding: "utf-8",
+    });
   } catch (err) {
     return err.toString();
   }
