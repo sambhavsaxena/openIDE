@@ -11,6 +11,7 @@ const interpretpy = (code, input) => {
   try {
     output = execFileSync("python3", ["./operations/files/main.py"], {
       input: input,
+      timeout: 5000,
       encoding: "utf-8",
     });
   } catch (err) {

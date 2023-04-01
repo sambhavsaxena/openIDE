@@ -19,6 +19,7 @@ const compilejava = (code, input) => {
   try {
     pre = execFileSync("java -cp ./operations/binaries main", {
       encoding: "utf-8",
+      timeout: 5000,
       input: input,
     });
     output = pre.toString();

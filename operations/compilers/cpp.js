@@ -16,6 +16,7 @@ const compilecpp = (code, input) => {
   try {
     output = execFileSync("./operations/binaries/main", {
       input: input,
+      timeout: 5000,
       encoding: "utf-8",
     });
   } catch (err) {
