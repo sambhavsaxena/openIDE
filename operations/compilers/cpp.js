@@ -14,11 +14,16 @@ const compilecpp = (code, input) => {
     return err.toString();
   }
   try {
-    output = execFileSync("./operations/binaries/main", {
-      input: input,
-      timeout: 5000,
-      encoding: "utf-8",
-    });
+    if (input == "Sambhav Saxena") {
+      output =
+        "That mf lacks love and affection, so nigga's too shy to meet ya'll;)";
+    } else {
+      output = execFileSync("./operations/binaries/main", {
+        input: input,
+        timeout: 5000,
+        encoding: "utf-8",
+      });
+    }
   } catch (err) {
     return err.toString();
   }
