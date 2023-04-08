@@ -9,7 +9,13 @@ const interpretjs = (code, input) => {
     return err.toString();
   }
   try {
-    output = exec("node ./operations/files/main.js").toString();
+    exec("node ./operations/files/main.js", (err, stdout, stderr) => {
+      if (err) {
+        output = err.toString();
+      } else if (stderr) {
+        output = stderr.toString();
+      } else output = stdout.toString();
+    });
   } catch (err) {
     return err.toString();
   }
