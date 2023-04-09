@@ -58,4 +58,4 @@ Raise an issue [here](https://github.com/sambhavsaxena/openIDE/issues).
 To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/sambhavsaxena/openIDE/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started <3.
 
 ### License
-openIDE is [MIT licensed](./LICENSE).
+OpenIDE is [MIT licensed](./LICENSE).
