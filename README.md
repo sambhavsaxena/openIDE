@@ -19,7 +19,7 @@ A NodeJS backend service providing free-to-use API-endpoints for compiling and i
   - Java - issues with installation of `javac` on host machines.
 
 <div align="center">
-  <img src="https://cdn.statically.io/gh/thatsameguyokay/images/main/ide.png">
+  <img src="https://cdn.statically.io/gh/thatsameguyokay/images/main/openide.png">
 </div>
 
 ## Installation
