@@ -33,7 +33,10 @@ const IDE = () => {
       setResponse(res.data.op);
       setLoading(false);
     } catch (err) {
-      toast.error("Error Occured! Try again later");
+      toast.error("Something went wrong!", {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 2000,
+      });
       setLoading(false);
     }
   };

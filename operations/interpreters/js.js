@@ -1,4 +1,4 @@
-import { execFileSync } from "child_process";
+import { spawn } from "child_process";
 import fs from "fs";
 
 const interpretjs = (code, input) => {
@@ -9,7 +9,7 @@ const interpretjs = (code, input) => {
     return err.toString();
   }
   try {
-    output = execFileSync("node", ["./operations/files/main.js"], {
+    output = spawn("node", ["./operations/files/main.js"], {
       input: input,
       timeout: 5000,
       encoding: "utf-8",
