@@ -20,7 +20,7 @@ const codeController = asyncHandler(async (req, res) => {
       op = compilejava(code);
       break;
     case "py":
-      op = interpretpy(code);
+      op = interpretpy(code, input);
       break;
     default:
       return res.status(400);

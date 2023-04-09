@@ -11,14 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/submit", submitCodeRoutes);
 
-app.get("/health", (req, res) => {
-  const response = {
-    url: process.env.URL,
-    github: "https://github.com/sambhavsaxena/",
-  };
-  res.json(response);
-});
-
 app.listen(PORT, () => {
   console.log(`Live @${PORT}`);
 });
