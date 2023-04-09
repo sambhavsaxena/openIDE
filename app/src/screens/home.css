@@ -1,0 +1,169 @@
+.playground {
+  display: flex;
+  margin-top: 5vh;
+  flex-direction: row;
+  align-items: center;
+  justify-items: space-evenly;
+}
+
+.head {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.editors {
+  width: 95%;
+  min-height: 92vh;
+  margin: 1%;
+}
+
+.plain-text {
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 10vh;
+  max-width: 80%;
+}
+
+.editx {
+  height: 60vh;
+  overflow: auto;
+}
+
+.panel {
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.output {
+  height: 20vh;
+  width: 49.5%;
+  overflow: auto;
+}
+
+.buttons {
+  width: 40%;
+  min-height: 90vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.explore {
+  margin-top: 5vh;
+}
+
+.exp {
+  margin: 40px;
+}
+
+.run {
+  margin-left: 60px;
+}
+
+.button {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+@media (max-width: 320px) {
+  .div {
+    flex-direction: column;
+  }
+  .head {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+  }
+  .explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn {
+    margin-top: 16px;
+  }
+  * {
+    font-size: 11px;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .playground {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .div {
+    flex-direction: column;
+  }
+  .head {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+  }
+  .buttons {
+    width: 100%;
+  }
+  .explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 16px;
+  }
+  * {
+    font-size: 11px;
+  }
+  .playground {
+    flex-direction: column;
+    margin: 1vw;
+  }
+}
+
+@media (max-width: 1080px) {
+  .playground {
+    flex-direction: column;
+  }
+  .head {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  .div {
+    flex-direction: column;
+  }
+  .head {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+  }
+  .buttons {
+    width: 100%;
+  }
+  .explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 16px;
+  }
+  * {
+    font-size: 11px;
+  }
+  .playground {
+    flex-direction: column;
+    margin: 1vw;
+  }
+}
