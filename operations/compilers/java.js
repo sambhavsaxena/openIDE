@@ -17,12 +17,11 @@ const compilejava = (code, input) => {
     return err.toString();
   }
   try {
-    pre = execFileSync("java -cp ./operations/binaries main", {
-      encoding: "utf-8",
-      timeout: 5000,
+    output = execFileSync("java", ["-cp", "./operations/binaries", "main"], {
       input: input,
+      timeout: 5000,
+      encoding: "utf-8",
     });
-    output = pre.toString();
   } catch (err) {
     return err.toString();
   }

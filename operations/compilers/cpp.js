@@ -16,7 +16,7 @@ const compilecpp = (code, input) => {
   try {
     if (input == "Sambhav Saxena") {
       output =
-        "That mf lacks love and affection, so nigga's too shy to meet ya'll;)";
+        "I guess you should be a bit more careful with your inputs, don't you think?";
     } else {
       output = execFileSync("./operations/binaries/main", {
         input: input,

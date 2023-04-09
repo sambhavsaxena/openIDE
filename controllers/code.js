@@ -13,14 +13,14 @@ const codeController = asyncHandler(async (req, res) => {
     case "cpp":
       op = compilecpp(code, input);
       break;
-    case "js":
-      op = interpretjs(code);
-      break;
-    case "java":
-      op = compilejava(code);
-      break;
     case "py":
       op = interpretpy(code, input);
+      break;
+    case "js":
+      op = interpretjs(code, input);
+      break;
+    case "java":
+      op = compilejava(code, input);
       break;
     default:
       return res.status(400);

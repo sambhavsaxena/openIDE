@@ -2,9 +2,6 @@
 using namespace std;
 
 int main() {
-        int n;
-        cin>>n;
-        cout<<n<<endl;
-	cout << "Hello, write your code here:)" << endl;
+	cout << "Hello, write you here:)" << endl;
 	return 0;
 }
