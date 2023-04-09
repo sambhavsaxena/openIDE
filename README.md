@@ -1,17 +1,22 @@
 # OpenIDE
 
-A NodeJS environment providing free-to-use API-endpoints for compiling and interpreting different programming languages.
+A NodeJS backend service providing free-to-use API-endpoints for compiling and interpreting source code of different programming languages.
 
 <div align="center">DEMO</div>
 
 ![preview](https://cdn.statically.io/gh/thatsameguyokay/images/main/ide.gif)
 
 * **Usage:** The server routes can be used to serve several frontends at once for compiling source code.
-* **No Time restrictions:** As of now, there is no limit to time and number of requests.
+* **No time restrictions:** As of now, there is no limit to time and number of requests.
 * **Clean UI:** The app has been implemented with a clean and easy to use UI.
 * **Modulated code:** The code structure is fully-modulated and based on industry level design patterns.
-* **latency:** Latency for the server depends on average traffic and servers on which is has been hosted.
+* **Latency:** Latency for the server depends on average traffic and servers on which is has been hosted.
 * **Scalable:** Requests get executed in order of FCFS, and queues before compilation and execution.
+* Supported Languages: 
+  - C++ ✅
+  - Python ✅
+  - JavaScript - issues with parsing output (needs to be fixed).
+  - Java - issues with installation of `javac` on host machines.
 
 <div align="center">
   <img src="https://cdn.statically.io/gh/thatsameguyokay/images/main/ide.png">
