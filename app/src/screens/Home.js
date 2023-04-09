@@ -24,11 +24,10 @@ const Home = () => {
         >
           Hi, you're at Open IDE's home.
           <br />
-          The source of this project has been made private because the servers
+          The source of this project has been made open for all but the servers
           cannot yet afford to have open end-points [how ironic], which could
-          result in heavy traffic and ultimately, server slowdown. It still
-          depends on third party services to host its backend, and I'm working
-          on a solution to this problem.
+          result in heavy traffic and ultimately, server slowdown. OpenIDE
+          depends on third party services to host its backend, which supports only shared-hosting on their free plan, causing higher latency and slower response. I'm working on a solution to this problem.
           <br />
           <br />
           Until then, you can read more about the architecture of Open IDE or
