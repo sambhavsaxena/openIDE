@@ -1,1 +1,1 @@
-print(20**2)
+print('Hello World!')
