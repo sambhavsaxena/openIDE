@@ -7,7 +7,7 @@
 }
 
 .head {
-  margin-top: 10vh;
+  margin-top: 8vh;
   margin-bottom: 10vh;
 }
 
@@ -110,7 +110,6 @@
   }
   .explore {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -150,6 +149,41 @@
   .explore {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 16px;
+  }
+  * {
+    font-size: 11px;
+  }
+  .playground {
+    flex-direction: column;
+    margin: 1vw;
+  }
+}
+
+@media (max-width: 1280px) {
+  .playground {
+    flex-direction: column;
+  }
+  .head {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  .head {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+  }
+  .buttons {
+    width: 100%;
+  }
+  .explore {
+    display: flex;
     align-items: center;
     justify-content: center;
   }
