@@ -12,7 +12,7 @@ const Home = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          marginTop: "120px",
+          marginTop: "20px",
         }}
       >
         <h1 className="head">
