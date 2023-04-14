@@ -15,7 +15,7 @@ const About = () => {
         }}
       >
         <h1 style={{ marginBottom: "5vh" }}>About Me</h1>
-        <p className="text-center plain-text">
+        <p className="text-center"  style={{ maxWidth: "60%" }}>
           So, I'm glad to see you're too excited to know about me:{")"}
           <br />
           <br />
