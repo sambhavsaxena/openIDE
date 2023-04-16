@@ -14,7 +14,7 @@ const About = () => {
           marginTop: "120px",
         }}
       >
-        <h1 style={{ marginBottom: "5vh" }}>About Me</h1>
+        <h1 className="head">About Me</h1>
         <p className="text-center plain-text">
           So, I'm glad to see you're too excited to know about me:{")"}
           <br />
@@ -29,14 +29,24 @@ const About = () => {
           my portfolio to read more about the projects I have developed, my
           experiences and recent updates.
         </p>
-        <Button
-          variant="outline-dark"
-          target="_blank"
-          href="https://interpreted.vercel.app"
-          className="exp"
-        >
-          Portfolio
-        </Button>
+        <div className="explore">
+          <Button
+            variant="outline-dark"
+            target="_blank"
+            href="https://interpreted.vercel.app"
+            className="exp"
+          >
+            Portfolio
+          </Button>
+          <Button
+            variant="outline-dark"
+            target="_blank"
+            href="https://interpreted1.statuspage.io/"
+            className="exp"
+          >
+            Check Status
+          </Button>
+        </div>
       </div>
     </div>
   );

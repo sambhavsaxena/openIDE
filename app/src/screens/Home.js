@@ -23,6 +23,8 @@ const Home = () => {
         >
           Hi, you're at Open IDE's home.
           <br />
+          <br />
+          <br />
           The source of this project has been made open for all but the servers
           cannot yet afford to have open end-points [how ironic], which could
           result in heavy traffic and ultimately, server slowdown. OpenIDE

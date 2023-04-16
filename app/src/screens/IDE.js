@@ -148,7 +148,7 @@ const IDE = () => {
                 )}
               </div>
             </div>
-            <div className="plain-text">
+            <div className="plain-text marginx">
               You can try out anything in this playground. I want you to crash
               the IDE however you want. I'll be happy to see you find more bugs.
               In case you find any (which you probably will), you can mail me
