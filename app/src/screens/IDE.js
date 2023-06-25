@@ -33,7 +33,7 @@ const IDE = () => {
       setResponse(res.data.op);
       setLoading(false);
     } catch (err) {
-      toast.error("Something went wrong!", {
+      toast.error(`${err}`, {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 2000,
       });
@@ -42,6 +42,7 @@ const IDE = () => {
   };
 
   const handlekeys = (e) => {
+    e.preventDefault();
     if (e.shiftKey && e.keyCode === 13) {
       fetch();
     }

@@ -12,9 +12,9 @@ app.use(express.json());
 app.use("/api/submit", submitCodeRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Server healthy");
+  res.send("Server alive");
 });
 
 app.listen(PORT, () => {
-  console.log(`Live @${PORT}`);
+  console.log(`Living @${PORT}`);
 });
