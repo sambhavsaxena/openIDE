@@ -15,7 +15,7 @@ A NodeJS backend service providing free-to-use API-endpoints for compiling and i
 * Supported Languages: 
   - C++ ✅
   - Python ✅
-  - JavaScript - issues with parsing output (needs to be fixed).
+  - JavaScript ✅️
   - Java - issues with installation of `javac` on host machines.
 
 <div align="center">
