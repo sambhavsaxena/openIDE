@@ -5,9 +5,7 @@ import interpretpy from "../operations/interpreters/py.js";
 import interpretjs from "../operations/interpreters/js.js";
 
 const codeController = asyncHandler(async (req, res) => {
-  const { code } = req.body;
-  const { language } = req.body;
-  const { input } = req.body;
+  const { code, language, input } = req.body;
   var op;
   switch (language) {
     case "cpp":
