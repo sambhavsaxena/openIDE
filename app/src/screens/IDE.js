@@ -42,7 +42,6 @@ const IDE = () => {
   };
 
   const handlekeys = (e) => {
-    e.preventDefault();
     if (e.shiftKey && e.keyCode === 13) {
       fetch();
     }
