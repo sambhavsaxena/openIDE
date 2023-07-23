@@ -19,6 +19,6 @@ const languages = [
   },
 ];
 
-const URL = "//44.201.126.0/api/submit/code";
+const URL = "https://openide-render.onrender.com/api/submit/code";
 
 export { languages, URL };
