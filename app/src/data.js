@@ -19,6 +19,6 @@ const languages = [
   },
 ];
 
-const URL = "//44.201.126.0/api/submit/code";
+const URL = "http://44.201.126.0/api/submit/code";
 
 export { languages, URL };
