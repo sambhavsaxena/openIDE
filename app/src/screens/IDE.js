@@ -6,7 +6,7 @@ import CodeEditor from "@uiw/react-textarea-code-editor";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./home.css";
-import { languages, URL } from "../data.js";
+import { languages } from "../data.js";
 
 toast.configure();
 
@@ -16,7 +16,7 @@ const IDE = () => {
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState(language.snippet);
   const [input, setInput] = useState("");
-  const ENDPOINT = URL;
+  const ENDPOINT = process.env.REACT_APP_SERVER_URL;
 
   useEffect(() => {
     setCode(language.snippet);
