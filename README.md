@@ -4,7 +4,7 @@ A NodeJS backend service providing free-to-use API-endpoints for compiling and i
 
 <div align="center">DEMO</div>
 
-![preview](https://cdn.statically.io/gh/thatsameguyokay/images/main/ide.gif)
+![preview of dashboard](https://cdn.statically.io/gh/thatsameguyokay/images/main/ide.gif)
 
 * **Usage:** The server routes can be used to serve several frontends at once for compiling source code.
 * **No time restrictions:** As of now, there is no limit to time and number of requests.
