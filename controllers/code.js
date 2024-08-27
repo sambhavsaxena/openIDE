@@ -3,7 +3,7 @@ import compilecpp from "../operations/compilers/cpp.js";
 import compilejava from "../operations/compilers/java.js";
 import interpretpy from "../operations/interpreters/py.js";
 import interpretjs from "../operations/interpreters/js.js";
-import vulnurable_libraries from "../utils/vulnurable_libraries.js";
+import vulnerable_libraries from "../utils/vulnerable_libraries.js";
 
 const VULNERABLE_ERROR_RESPONSE =
   "Execution blocked! Found vulnurable source. Try again, hahahaha";
@@ -11,7 +11,7 @@ const VULNERABLE_ERROR_RESPONSE =
 const check_vulnerable_libraries = (stream) => {
   const lines = stream.split("\n");
   for (let line of lines) {
-    for (let include of vulnurable_libraries) {
+    for (let include of vulnerable_libraries) {
       if (line.includes(include)) {
         return true;
       }
