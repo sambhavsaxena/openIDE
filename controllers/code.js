@@ -3,22 +3,27 @@ import compilecpp from "../operations/compilers/cpp.js";
 import compilejava from "../operations/compilers/java.js";
 import interpretpy from "../operations/interpreters/py.js";
 import interpretjs from "../operations/interpreters/js.js";
+import vulnurable_libraries from "../utils/vulnurable_libraries.js";
 
-function checkImportInStream(stream) {
-  const lines = stream.split('\n');
+const VULNERABLE_ERROR_RESPONSE =
+  "Execution blocked! Found vulnurable source. Try again, hahahaha";
+
+const check_vulnerable_libraries = (stream) => {
+  const lines = stream.split("\n");
   for (let line of lines) {
-      if (line.includes('import os') || line.includes('from os')) {
-          return true;
+    for (let include of vulnurable_libraries) {
+      if (line.includes(include)) {
+        return true;
       }
+    }
   }
   return false;
-}
+};
 
 const codeController = asyncHandler(async (req, res) => {
   const { code, language, input } = req.body;
-  var is_os_imported = checkImportInStream(code)
-  if(is_os_imported) 
-    return res.send({"op": "Importing 'os' is not allowed"})
+  if (check_vulnerable_libraries(code))
+    return res.send({ op: VULNERABLE_ERROR_RESPONSE });
   var op;
   switch (language) {
     case "cpp":
