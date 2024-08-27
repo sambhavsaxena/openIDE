@@ -44,6 +44,8 @@ const vulnerable_libraries = [
   "import tempfile",
   "import pwd",
   "import grp",
+  'import builtins',
+  'from builtins import os'
 ];
 
 export default vulnerable_libraries
