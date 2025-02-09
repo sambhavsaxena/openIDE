@@ -1,5 +1,5 @@
 const languages = [
-  { name: "Python", type: "py", snippet: "print('Hello World!')\n" },
+  { name: "Python", type: "python", snippet: "print('Hello World!')\n" },
   {
     name: "JavaScript",
     type: "js",
@@ -10,6 +10,12 @@ const languages = [
     type: "cpp",
     snippet:
       '#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n\tcout << "Hello, write your code here:)" << endl;\n\treturn 0;\n}\n',
+  },
+  {
+    name: "C",
+    type: "c",
+    snippet:
+      '#include <stdio.h>\nint main(){ \nchar a = 30; \nchar b = 40; \nchar c = 10; \nchar d = (a * b) / c;\nprintf("%d ", d);\nreturn 0;\n}\n',
   },
   {
     name: "Java",

@@ -30,7 +30,7 @@ const IDE = () => {
         input,
         language: language.type,
       });
-      setResponse(res.data.op);
+      setResponse(res.data.ans);
       setLoading(false);
     } catch (err) {
       toast.error(`${err}`, {

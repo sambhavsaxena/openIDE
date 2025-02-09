@@ -1,47 +1,33 @@
 import asyncHandler from "express-async-handler";
-import compilecpp from "../operations/compilers/cpp.js";
-import compilejava from "../operations/compilers/java.js";
-import interpretpy from "../operations/interpreters/py.js";
-import interpretjs from "../operations/interpreters/js.js";
-import vulnerable_libraries from "../utils/vulnerable_libraries.js";
+import axios from "axios"
+import dotenv from "dotenv"
+dotenv.config();
 
-const VULNERABLE_ERROR_RESPONSE =
-  "Execution blocked! Found vulnurable source. Try again, hahahaha";
-
-const check_vulnerable_libraries = (stream) => {
-  const lines = stream.split("\n");
-  for (let line of lines) {
-    for (let include of vulnerable_libraries) {
-      if (line.includes(include)) {
-        return true;
-      }
-    }
-  }
-  return false;
-};
+const ENDPOINT = process.env.ENDPOINT;
+const ENDPOINT_2 = process.env.ENDPOINT_2;
 
 const codeController = asyncHandler(async (req, res) => {
+  var status, output, response;
   const { code, language, input } = req.body;
-  if (check_vulnerable_libraries(code))
-    return res.send({ op: VULNERABLE_ERROR_RESPONSE });
-  var op;
-  switch (language) {
-    case "cpp":
-      op = compilecpp(code, input);
+  const resp = await axios.post(ENDPOINT, {
+    code,
+    input,
+    language: language,
+    save: false
+  });
+  const url = `${ENDPOINT_2}/${resp.data.id}`
+  do {
+    const data = await axios.get(url);
+    response = data.data;
+    status = response.status;
+    if (response.rntError) {
+      output = response.rntError;
       break;
-    case "py":
-      op = interpretpy(code, input);
-      break;
-    case "js":
-      op = interpretjs(code, input);
-      break;
-    case "java":
-      op = compilejava(code, input);
-      break;
-    default:
-      return res.status(400);
-  }
-  return res.send({ op });
+    }
+    output = response.output ? response.output : response.cmpError;
+  } while (status !== "SUCCESS");
+  const ans = output.replace(/gfg/gi, '');
+  return res.send({ ans });
 });
 
 export default codeController;
